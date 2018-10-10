@@ -1,29 +1,32 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <jalan-header />
+    <router-view />
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+<style lang="stylus">
+#app
+  font-family 'Avenir', Helvetica, Arial, sans-serif
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+  max-width 1280px
+  margin auto
+  height 100%
+  position relative
+
+  ::-webkit-scrollbar
+    width 4px
+
+  ::-webkit-scrollbar-track
+    -webkit-box-shadow inset 0 0 6px rgba(255, 255, 255, 0.3)
+    box-shadow 0 0 transparent
+    outline none
+    border none
+    margin-top 16px
+
+  ::-webkit-scrollbar-thumb
+    border none
+    border-radius 10px
+    background linear-gradient(180deg, #cacaca 0%, rgba(255, 255, 255, 0) 50%)
 </style>
